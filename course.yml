@@ -1,7 +1,7 @@
-title            : Template R DataCamp Course
-author_field     : filipsch
-description      : This is an automatically generated demo course which will help you on your way to create an awesome DataCamp course.
-author_bio       : filipsch is an awesome DataCamp course creator.<br>You can say something about yourself <strong>here</strong>.
+title            : Writing SCTs with testwhat
+author_field     : Content Engineering
+description      : 'This course contains some multiple choice exercises to test your understanding of the testwhat package. Before taking this course, have a look at the <a href="https//github.com/datacamp/testwhat/wiki" target="_blank">testwhat wiki pages</a>.'
+author_bio       : The Content Engineering team at DataCamp is responsible for DataCamp Teach and the tools to write SCTs
 university       : DataCamp
-difficulty_level : 2
+difficulty_level : 1
 time_needed      : 1 hour
