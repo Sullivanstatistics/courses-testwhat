@@ -16,7 +16,7 @@ Suppose you're writing a Multiple Choice Exercise (like the exercise you're taki
 *** =hint
 No hints, I'm sorry!
 
-*** =pec
+*** =pre_exercise_code
 ```{r}
 # no pec
 ```
