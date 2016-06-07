@@ -16,6 +16,11 @@ Suppose you're writing a Multiple Choice Exercise (like the exercise you're taki
 *** =hint
 No hints, I'm sorry!
 
+*** =pec
+```{r}
+# no pec
+```
+
 *** =sct
 ```{r}
 msg1 <- "Incorrect. You have to specify the `correct` and `feedback_msgs` arguments inside `test_mc()`."
