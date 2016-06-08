@@ -56,8 +56,7 @@ msg4 <- "The second option is correct, but the order of the messages you pass in
 test_mc(correct = 3, feedback_msgs = c(msg1, msg2, msg3, msg4))
 ```
 
-
---- type:MultipleChoiceExercise lang:r xp:50 skills:1
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:0beefc3850
 ## Placeholder
 
 More exercises coming soon!
