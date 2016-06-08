@@ -2,7 +2,7 @@
 title       : Basic testwhat functions
 description : Some questions about basic functions in the testwhat package.
 
---- type:MultipleChoiceExercise lang:r xp:100 skills:1
+--- type:MultipleChoiceExercise lang:r xp:100 skills:1 key:8cd4c6ae94
 ## Getting started
 
 In this course, you can test your understanding of the `testwhat` package. `testwhat` contains a bunch of functions to create so-called Submission Correctness Tests, or SCTs.
