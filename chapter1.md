@@ -11,14 +11,9 @@ To learn more about course creation for DataCamp, make sure to visit the [DataCa
 
 To easily use `testwhat`, you'll want to install it on your own system and load the package in your R session. That way, you can easily access the documentation of all functions.
 
-You can install `testwhat`, you use:
+To install `testwhat`, follow the instructions in the [GitHub README](https://github.com/datacamp/testwhat) on GitHub. 
 
-```
-library(devtools)
-install_github('datacamp/testwhat')
-```
-
-Which command do you need to load the `testwhat` package after installation?
+Once installed, which command do you need to load the `testwhat` package after installation?
 
 *** =instructions
 - `import(testwhat)`
@@ -30,7 +25,7 @@ Which command do you need to load the `testwhat` package after installation?
 No hints, I'm sorry!
 
 *** =sct
-```{python}
+```{r}
 msg1 <- "Incorrect."
 msg2 <- "Correct!"
 msg3 <- msg1
@@ -53,7 +48,7 @@ Suppose you're writing a Multiple Choice Exercise (like the exercise you're taki
 No hints, I'm sorry!
 
 *** =sct
-```{python}
+```{r}
 msg1 <- "Incorrect. You have to specify the `correct` and `feedback_msgs` arguments inside `test_mc()`."
 msg2 <- "The second option is correct, so you need `correct = 2`."
 msg3 <- "Well done!"
@@ -63,7 +58,7 @@ test_mc(correct = 3, feedback_msgs = c(msg1, msg2, msg3, msg4))
 
 
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1
-## test_student_typed
+## Placeholder
 
 More exercises coming soon!
 
@@ -77,7 +72,7 @@ More exercises coming soon!
 No hints, I'm sorry!
 
 *** =sct
-```{python}
+```{r}
 test_mc(correct = 1)
 ```
 
