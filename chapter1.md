@@ -148,7 +148,7 @@ test_mc(2) # if 2 is the correct option.
 ```
 
 
---- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:f3aa69c612
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:ae6a452afd
 ## test_output_regex
 
 Assignment comes here. Use Markdown for text formatting.
