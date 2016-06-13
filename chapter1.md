@@ -147,10 +147,10 @@ No hints, I'm sorry!
 *** =sct
 ```{r}
 msg1 <- "It should be possible to have multiple spaces, and also non-alphanumerical characters."
-msg2 <- "YTou have to have at least one space between words, so you need a `+`."
+msg2 <- "You have to have at least one space between words, so you need a `+`."
 msg3 <- "You need at least one letter in the place where you live, so `.*?` is not appropriate"
 msg4 <- "Great. As you see, writing good regular expressions is vital. To learn more about this, check out the [documentation on regexes in R](https://stat.ethz.ch/R-manual/R-devel/library/base/html/regex.html)."
-test_mc(2) # if 2 is the correct option.
+test_mc(4, feedback_msgs = c(msg1, msg2, msg3, msg4))
 ```
 
 
