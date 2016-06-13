@@ -247,6 +247,29 @@ No hints, I'm sorry!
 test_mc(2) # if 2 is the correct option.
 ```
 
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:1f8qwc6188
+## test_function (2)
+
+Assignment comes here. Use Markdown for text formatting.
+
+*** =instructions
+- option 1
+- option 2
+- option 3
+
+*** =hint
+No hints, I'm sorry!
+
+*** =pre_exercise_code
+```{r}
+# pec
+```
+
+*** =sct
+```{r}
+test_mc(2) # if 2 is the correct option.
+```
+
 
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:c954b2cec9
 ## test_error
