@@ -149,7 +149,7 @@ test_mc(2) # if 2 is the correct option.
 
 
 <<<<<<< HEAD
---- type:MultipleChoiceExercise lang:r xp:50 skills:1
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:0d7b0ebd0b
 =======
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:ae6a452afd
 ## test_output_regex
