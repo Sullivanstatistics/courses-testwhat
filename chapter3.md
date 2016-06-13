@@ -75,7 +75,7 @@ test_mc(2) # if 2 is the correct option.
 
 
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:1c2b6es825
-## test_for_loop
+## test_while_loop
 
 Assignment comes here. Use Markdown for text formatting.
 
