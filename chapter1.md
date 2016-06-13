@@ -61,14 +61,15 @@ test_mc(correct = 3, feedback_msgs = c(msg1, msg2, msg3, msg4))
 
 `test_student_typed()` is a very basic `testwhat` function to test whether a student typed something.
 
-How can you robustly test whether a student correctly typed a comment:
+Suppose you want to test whether a student typed a comment, like this:
 
 ```
 # This is my comment
 ```
 
-*** =instructions
+Which function call should you include in your SCT to do this robustly?
 
+*** =instructions
 - `test_student_typed("# This is my comment")`
 - `test_student_typed(c("# This is my comment", "# this is my comment"))`
 - `test_student_typed("^#\\s*[T|t]his is my comment")`
@@ -79,7 +80,7 @@ No hints, I'm sorry!
 
 *** =sct
 ```{r}
-msg1 <- "There are many ways in which people type this comment, so you'll need a regex."
+msg1 <- "There are many ways in which people type this comment, so you'll need a regular expression."
 msg2 <- msg1
 msg3 <- "The regex makes sense, but you have to make sure to set the `fixed` argument appropriately if you use a regex."
 msg4 <- "Correct!"
@@ -209,7 +210,7 @@ msg2 <- "`names` is not an argument of `test_object`"
 msg3 <- msg1
 msg4 <- "Correcto perfecto!"
 msg5 <- msg1
-mgs6 <- "Simply using `test_object(\"y\")` will not check the names you give to the vector elements."
+msg6 <- "Simply using `test_object(\"y\")` will not check the names you give to the vector elements."
 test_mc(4, feedback_msgs = c(msg1, msg2, msg3, msg4, msg5, msg6))
 ```
 
@@ -226,7 +227,7 @@ vec <- c(1:50, NA, 51:100)
 mean(vec, na.rm = TRUE)
 ```
 
-You want to test whether the student performed this student call correctly. Which `test_function()` call below should you use in your SCT?
+Which `test_function()` call should you use in your SCT to test a submission?
 
 *** =instructions
 - `test_function(mean)`
