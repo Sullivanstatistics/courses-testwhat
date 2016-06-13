@@ -148,35 +148,7 @@ test_mc(2) # if 2 is the correct option.
 ```
 
 
-<<<<<<< HEAD
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:7df833a013
-=======
---- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:ae6a452afd
-## test_output_regex
-
-Assignment comes here. Use Markdown for text formatting.
-
-*** =instructions
-- option 1
-- option 2
-- option 3
-
-*** =hint
-No hints, I'm sorry!
-
-*** =pre_exercise_code
-```{r}
-# pec
-```
-
-*** =sct
-```{r}
-test_mc(2) # if 2 is the correct option.
-```
-
-
---- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:e81f043acf
->>>>>>> 4bf22ba074863526317b70960d24abb3e0097072
 ## test_object (1)
 
 Assignment comes here. Use Markdown for text formatting.
