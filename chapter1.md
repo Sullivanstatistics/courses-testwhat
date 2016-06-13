@@ -76,7 +76,7 @@ test_mc(correct = 1)
 ```
 
 
---- type:MultipleChoiceExercise lang:r xp:50 skills:1
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:169eaba475
 ## test_student_typed
 
 Assignment comes here. Use Markdown for text formatting.
@@ -100,7 +100,7 @@ test_mc(2) # if 2 is the correct option.
 ```
 
 
---- type:MultipleChoiceExercise lang:r xp:50 skills:1
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:d84512adbe
 ## test_output_contains
 
 Assignment comes here. Use Markdown for text formatting.
@@ -124,7 +124,7 @@ test_mc(2) # if 2 is the correct option.
 ```
 
 
---- type:MultipleChoiceExercise lang:r xp:50 skills:1
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:f3aa69c612
 ## test_output_regex
 
 Assignment comes here. Use Markdown for text formatting.
@@ -148,7 +148,7 @@ test_mc(2) # if 2 is the correct option.
 ```
 
 
---- type:MultipleChoiceExercise lang:r xp:50 skills:1
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:f3aa69c612
 ## test_output_regex
 
 Assignment comes here. Use Markdown for text formatting.
@@ -172,7 +172,7 @@ test_mc(2) # if 2 is the correct option.
 ```
 
 
---- type:MultipleChoiceExercise lang:r xp:50 skills:1
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:e81f043acf
 ## test_object (1)
 
 Assignment comes here. Use Markdown for text formatting.
@@ -196,7 +196,7 @@ test_mc(2) # if 2 is the correct option.
 ```
 
 
---- type:MultipleChoiceExercise lang:r xp:50 skills:1
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:28575361b9
 ## test_object(2)
 
 Assignment comes here. Use Markdown for text formatting.
@@ -220,7 +220,7 @@ test_mc(2) # if 2 is the correct option.
 ```
 
 
---- type:MultipleChoiceExercise lang:r xp:50 skills:1
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:c61881f8ee
 ## test_function (1)
 
 Assignment comes here. Use Markdown for text formatting.
@@ -244,7 +244,7 @@ test_mc(2) # if 2 is the correct option.
 ```
 
 
---- type:MultipleChoiceExercise lang:r xp:50 skills:1
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:c954b2cec9
 ## test_error
 
 Assignment comes here. Use Markdown for text formatting.
