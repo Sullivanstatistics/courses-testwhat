@@ -130,8 +130,6 @@ You want to do this as robustly as possible. All of the following submissions sh
 - `I live in Leuven, Belgium`
 - `I live in a small house`
 - `i live in San Diego`
-- `i  live in Boston`
-- `  i  live in Boston`
 
 Which call would be most appropriate? We left out the part that specified `incorrect_msg`, although it's advised to specify this custom message for `test_output_regex()`.
 
