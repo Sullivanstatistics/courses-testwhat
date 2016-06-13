@@ -217,24 +217,37 @@ test_mc(4, feedback_msgs = c(msg1, msg2, msg3, msg4, msg5, msg6))
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:c61881f8ee
 ## test_function (1)
 
-Assignment comes here. Use Markdown for text formatting.
+With `test_function()`, you can test whether the student called a function, optionally with the correct arguments.
+
+Suppose you've written an exercise that asks the student to use the `mean()` function as follows:
+
+```
+vec <- c(1:50, NA, 51:100)
+mean(vec, na.rm = TRUE)
+```
+
+You want to test whether the student performed this student call correctly. Which `test_function()` call below should you use in your SCT?
 
 *** =instructions
-- option 1
-- option 2
-- option 3
+- `test_function(mean)`
+- `test_function("mean")`
+- `test_function("mean", args = c("x", "na.rm"))
+- `test_function(mean, args = c(x, na.rm))`
+- `test_function("mean", args = c("vec", "TRUE"))`
+- `test_function(mean, args = c(vec, TRUE))`
 
 *** =hint
 No hints, I'm sorry!
 
-*** =pre_exercise_code
-```{r}
-# pec
-```
-
 *** =sct
 ```{r}
-test_mc(2) # if 2 is the correct option.
+msg1 <- "Make sure to wrap `mean` in quotes inside `test_function()`."
+msg2 <- "You also have to specify the arguments that you want to check through the `args` argument of `test_function()`."
+msg3 <- "Correct!"
+msg4 <- "Make sure to wrap `mean` and the arguments in quotes inside `test_function()`."
+msg5 <- "You did not correctly specify the arguments. You have to specify the argument names as they appear in the documentation of `mean()`, so `\"x\"` and `\"na.rm\"`."
+msg6 <- "You have to use quotes around `mean`; you haven't specified the arguments correctly."
+test_mc(3, feedback_msgs = c(msg1, msg2, msg3, msg4, msg5, msg6))
 ```
 
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:1f8qwc6188
