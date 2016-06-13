@@ -157,47 +157,60 @@ test_mc(4, feedback_msgs = c(msg1, msg2, msg3, msg4))
 
 `test_object()` allows you to robustly compare the objects a student created with the objects that are created if you run the solution code.
 
+Suppose that the student has to create the object `x`, equal to the sum of 2 and 4. How do you use `test_object()` to test this?
 
 *** =instructions
-- option 1
-- option 2
-- option 3
+- `test_object(x, 2 + 4)`
+- `test_object("x", "2 + 4")`
+- `test_object(x)`
+- `test_object("x")`
 
 *** =hint
 No hints, I'm sorry!
 
-*** =pre_exercise_code
-```{r}
-# pec
-```
-
 *** =sct
 ```{r}
-test_mc(2) # if 2 is the correct option.
+msg1 <- "You have to place `x` in quotes, and there's no need to specify the value that `x` should have; this is inferred from the solution code."
+msg2 <- "There's no need to specify that value that `x` should have; this is inferred from the solution code"
+msg3 <- "You have to place `x` in quotes!"
+msg4 <- "Correct. Pretty easy, right?"
+test_mc(4, feedback_msgs = c(msg1, msg2, msg3, msg4))
 ```
 
 
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:28575361b9
 ## test_object(2)
 
-Assignment comes here. Use Markdown for text formatting.
+`test_object()` can use different 'equality conditions', such as "equal" and "equivalent". The latter checks the contents of an object, but does not check whether its attributes (such as the names of the elements) correspond to the object in the solution. `eq_condition = "equivalent"` is the default setting used by `test_object()`.
+
+Suppose you want the student to create the following vector `y`:
+
+```
+y <- c(a = 1, b = 2, c = 3)
+```
+
+You want to check if this vector is correctly created, both the values as well as the names. Which `test_object()` call is your pick?
 
 *** =instructions
-- option 1
-- option 2
-- option 3
+- `test_object(y, names = TRUE)`
+- `test_object("y", names = TRUE)`
+- `test_object(y, eq_condition = "equal")`
+- `test_object("y", eq_condition = "equal")`
+- `test_object(y)`
+- `test_object("y")`
 
 *** =hint
 No hints, I'm sorry!
 
-*** =pre_exercise_code
-```{r}
-# pec
-```
-
 *** =sct
 ```{r}
-test_mc(2) # if 2 is the correct option.
+msg1 <- "You have to place quotes around the object name."
+msg2 <- "`names` is not an argument of `test_object`"
+msg3 <- msg1
+msg4 <- "Correcto perfecto!"
+msg5 <- msg1
+mgs6 <- "Simply using `test_object(\"y\")` will not check the names you give to the vector elements."
+test_mc(4, feedback_msgs = c(msg1, msg2, msg3, msg4, msg5, msg6))
 ```
 
 
