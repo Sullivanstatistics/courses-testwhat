@@ -232,7 +232,7 @@ Which `test_function()` call should you use in your SCT to test a submission?
 *** =instructions
 - `test_function(mean)`
 - `test_function("mean")`
-- `test_function("mean", args = c("x", "na.rm"))
+- `test_function("mean", args = c("x", "na.rm"))`
 - `test_function(mean, args = c(x, na.rm))`
 - `test_function("mean", args = c("vec", "TRUE"))`
 - `test_function(mean, args = c(vec, TRUE))`

@@ -33,7 +33,7 @@ No hints, I'm sorry!
 ```{r}
 msg1 <- "You'll want to use `test_correct()` to give more specific feedback about the function call."
 msg2 <- "`test_output_contains()` makes no sense here."
-msg3 <_ "Well done! You could even specify the `*_msg` arguments in both `test_object()` and `test_function()` to go more specific."
+msg3 <- "Well done! You could even specify the `*_msg` arguments in both `test_object()` and `test_function()` to go more specific."
 msg4 <- "The arguments inside `test_function()` are not correctly specified."
 msg5 <- "Close, but not specific enough: you know which arguments the student should specify!"
 test_mc(3, feedback_msgs = c(msg1, msg2, msg3, msg4, msg5))
