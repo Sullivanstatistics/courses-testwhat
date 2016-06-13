@@ -24,8 +24,6 @@ Which SCT functions do you need to robustly test if `res` was correctly created?
 - `test_correct(test_object("res"), test_function("mean", args = c("vec", "na.rm")))`
 - `test_correct(test_object("res"), test_function("mean"))`
 
-
-
 *** =hint
 No hints, I'm sorry!
 
@@ -38,6 +36,7 @@ msg4 <- "The arguments inside `test_function()` are not correctly specified."
 msg5 <- "Close, but not specific enough: you know which arguments the student should specify!"
 test_mc(3, feedback_msgs = c(msg1, msg2, msg3, msg4, msg5))
 ```
+
 
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:54b2cec9c9
 ## test_correct (2)
@@ -91,7 +90,6 @@ test_correct({
 })
 ```
 
-
 *** =instructions
 - Option A
 - Option B
@@ -107,6 +105,7 @@ msg2 <- "In this case, the SCT can pass if the student simply did `res <- 1` and
 msg3 <- "It's not enough to simply test whether `res` is correct. This SCT will also pass if the student creates `res` correctly but doesn't print it out."
 test_mc(1, feedback_msgs = c(msg1, msg2, msg3))
 ```
+
 
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:2c053bec9c
 ## test_or
