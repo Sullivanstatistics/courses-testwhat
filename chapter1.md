@@ -253,48 +253,51 @@ test_mc(3, feedback_msgs = c(msg1, msg2, msg3, msg4, msg5, msg6))
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:1f8qwc6188
 ## test_function (2)
 
-Assignment comes here. Use Markdown for text formatting.
+There's many more arguments to specify in `test_function()`. Among them are `allow_extra`, `eval` and `eq_condition`, and of course all `_msg` arguments to override the automatically generated feedback messages.
+
+Suppose you've written an exercise that again asks the student to use the `mean()` function, but this time on a random vector, so you don't want to check the actual contents of the vector. Also, you want to make sure that `trim` was not defined (so you don't want to allow extra arguments).
+
+Which call below should you add to your SCT?
 
 *** =instructions
-- option 1
-- option 2
-- option 3
+- `test_function("mean", args = c("x", "na.rm"), allow_extra = FALSE)`
+- `test_function("mean", args = c("x", "na.rm"), eval = FALSE)`
+- `test_function("mean", args = c("x", "na.rm"), eval = c(FALSE, TRUE))`
+- `test_function("mean", args = c("x", "na.rm"), allow_extra = FALSE, eval = c(FALSE, TRUE))`
+- `test_function("mean", args = c("x", "na.rm"), allow_extra = FALSE, eq_condition = "equal")`
 
 *** =hint
 No hints, I'm sorry!
 
-*** =pre_exercise_code
-```{r}
-# pec
-```
-
 *** =sct
 ```{r}
-test_mc(2) # if 2 is the correct option.
+msg1 <- "Incorrect; you also have to specify `eval`"
+msg2 <- "Incorrect; `eval` is not correctly specified and you also have to specify `allow_extra`."
+msg3 <- "Incorrect; you also have to specify `allow_extra`."
+msg4 <- "Correct! Notice how `eval` tells for each argument whether or not it should be evaluated."
+msg5 <- "Incorrect: you should specify `eval` instead of `eq_condition`."
+test_mc(4, feedback_msgs = c(msg1, msg2, msg3, msg4, msg5))
 ```
-
 
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:c954b2cec9
 ## test_error
 
-Assignment comes here. Use Markdown for text formatting.
+`test_error()` simply checks if the code that the student submitted leads to a runtime error.
+
+It's a good idea to place `test_error()` in all your SCTs, but where?
 
 *** =instructions
-- option 1
-- option 2
-- option 3
+- At the end: that way, the student can get specific feedback about the submission before getting confronted with a potentially unmeaningful error message.
+- In the beginning: you want to point the student to an error as quickly as possible.
 
 *** =hint
 No hints, I'm sorry!
 
-*** =pre_exercise_code
-```{r}
-# pec
-```
-
 *** =sct
 ```{r}
-test_mc(2) # if 2 is the correct option.
+msg1 <- "Correct! Although there's something to say for this approach, it's better to use SCT feedback instead of R-generated error messages to guide the student."
+msg2 <- "Although there's something to say for this approach, it's better to use SCT feedback instead of R-generated error messages to guide the student."
+test_mc(1, feedback_msgs = c(msg1, msg2))
 ```
 
 
