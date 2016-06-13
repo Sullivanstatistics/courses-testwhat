@@ -125,7 +125,7 @@ Which `test_or()` function call containing `test_student_typed()` calls is equiv
 - `test_student_typed(test_or("a", "b", "c"))`
 - `test_or(test_student_typed("a"), test_student_typed("b"), test_student_typed("c"))`
 - `test_or(test_student_typed('a")); test_or(test_student_typed("b")); test_or(test_student_typed("c"))`
-- `test_student_typed_or("a", "b", "c")
+- `test_student_typed_or("a", "b", "c")`
 
 *** =hint
 No hints, I'm sorry!
