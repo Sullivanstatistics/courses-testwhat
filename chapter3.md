@@ -138,22 +138,55 @@ test_mc(2, feedback_msgs = c(msg1, msg2, msg3, msg4))
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:1c2b6es826
 ## test_function_definition
 
-Assignment comes here. Use Markdown for text formatting.
+Suppose you've written an exercise with the following solution:
+
+```
+# Define my_fun
+my_fun <- function(a, b) {
+	abs(a) + abs(b)
+}
+```
+
+with corresponding SCT:
+
+```
+test_function_definition("my_fun",
+                         function_test = {
+                           test_expression_result("my_fun(1,2)")
+                           test_expression_result("my_fun(-1,2)")
+                           test_expression_result("my_fun(1,-2)")
+                           test_expression_result("my_fun(-1,-2)")
+                         },
+                         body_test = {
+                           	test_function("abs", index = 1)
+                            test_function("abs", index = 2)
+                         })
+```
+
+Suppose now that the student submits the following code:
+
+```
+my_fun <- function(a, b) {
+	abs(a) + abs(b) + 1
+}
+```
+
+What happens?
 
 *** =instructions
-- option 1
-- option 2
-- option 3
+- The first test in `function_test` fails, leading to `body_test` being executed. These tests pass, so `function_test` is executed again, this time generating feedback.
+- The first test in `function_test` fails, leading to `body_test` being executed. The first test in this sub-SCT fails, generating feedback.
+- The first test in `function_test` fails, generating feedback.
+- The SCT passes.
 
 *** =hint
 No hints, I'm sorry!
 
-*** =pre_exercise_code
-```{r}
-# pec
-```
-
 *** =sct
 ```{r}
-test_mc(2) # if 2 is the correct option.
+msg1 <- "Correct! Behind the scenes, `test_function_definition()` works kind of like `test_correct()`."
+msg2 <- "Incorrect. All tests in `body_test` pass."
+msg3 <- "Almost correct, but also `body_test` is executed before `function_test` is executed 'loudly'."
+msg4 <- "This SCT does not pass..."
+test_mc(1, feedback_msgs = c(msg1, msg2, msg3, msg4))
 ```
