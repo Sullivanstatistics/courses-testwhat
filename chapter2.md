@@ -55,7 +55,7 @@ res <- mean(vec, na.rm = TRUE)
 res
 ```
 
-Which SCT call do you opt for?
+Which SCT do you opt for?
 
 Option A
 
