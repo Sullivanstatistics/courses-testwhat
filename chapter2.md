@@ -29,7 +29,7 @@ No hints, I'm sorry!
 
 *** =sct
 ```{r}
-msg1 <- "You'll want to use `test_correct()` to give more specific feedback about the function call."
+msg1 <- "You'll want to use `test_correct()` to give more specific feedback about the function call if `res` is not correct."
 msg2 <- "`test_output_contains()` makes no sense here."
 msg3 <- "Well done! You could even specify the `*_msg` arguments in both `test_object()` and `test_function()` to go more specific."
 msg4 <- "The arguments inside `test_function()` are not correctly specified."
