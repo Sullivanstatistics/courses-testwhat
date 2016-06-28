@@ -180,7 +180,7 @@ test_mc(4, feedback_msgs = c(msg1, msg2, msg3, msg4))
 
 
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:28575361b9
-## test_object(2)
+## test_object (2)
 
 `test_object()` can use different 'equality conditions', such as "equal" and "equivalent". The latter checks the contents of an object, but does not check whether its attributes (such as the names of the elements) correspond to the object in the solution. `eq_condition = "equivalent"` is the default setting used by `test_object()`.
 
@@ -214,6 +214,30 @@ msg6 <- "Simply using `test_object(\"y\")` will not check the names you give to 
 test_mc(4, feedback_msgs = c(msg1, msg2, msg3, msg4, msg5, msg6))
 ```
 
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:28575361b9
+## test_predefined_objects
+
+Often, your pre exercise code will contain code to create some variables in the student's workspace. Ideally, you want to check if these variables are still ok before you want to go on and check other things. With `test_predefined_objects()`, this is a walk in the park.
+
+Suppose that your pre exercise code creates three variables: `x`, `y` and `z`. Which call (that you typically put at the top of your SCT) will correctly check if these variables haven't been removed are changed?
+
+*** =instructions
+- `test_predefined_objects("x", "y", "z")`
+- `test_predefined_objects(c("x", "y", "z"))`
+- `test_predefined_objects(x, y, z)`
+- `test_predefined_objects(c(x, y, z))`
+
+*** =hint
+No hints, I'm sorry!
+
+*** =sct
+```{r}
+msg1 <- "Incorrect. You have to pass the object names as a vector."
+msg2 <- "Correct!"
+msg3 <- "Incorrect. You have to surround the object names with quotes."
+msg4 <- msg3
+test_mc(2, feedback_msgs = c(msg1, msg2, msg3, msg4))
+```
 
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:c61881f8ee
 ## test_function (1)
@@ -280,6 +304,38 @@ msg5 <- "Incorrect: you should specify `eval` instead of `eq_condition`."
 test_mc(4, feedback_msgs = c(msg1, msg2, msg3, msg4, msg5))
 ```
 
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1
+## test_operator
+
+With `test_operator()`, you can check whether operators were appropriately called.
+
+Suppose you've written an exercise that asks the student to perform two calculations:
+
+```
+4 + 5
+3 * 2
+```
+
+Which calls do you need to test this?
+
+*** =instructions
+- ``test_operator(`+`); test_operator(`*`);``
+- ``test_operator(`+`); test_operator(`*`, index = 2);``
+- `test_operator("+"); test_operator("*");`
+- `test_operator("+"); test_operator("*", index = 2);`
+
+*** =hint
+No hints, I'm sorry!
+
+*** =sct
+```{r}
+msg1 <- "Incorrect; You have to specify the operators in quotes, not in backticks."
+msg2 <- msg1
+msg3 <- "Correct!"
+msg4 <- "Incorrect: there's no need to specify `index = 2`; the multiplication operator is the first multiplication operator."
+test_mc(3, feedback_msgs = c(msg1, msg2, msg3, msg4))
+```
+
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:c954b2cec9
 ## test_error
 
@@ -300,5 +356,4 @@ msg1 <- "Correct! Although there's something to say for this approach, it's bett
 msg2 <- "Although there's something to say for this approach, it's better to use SCT feedback instead of R-generated error messages to guide the student."
 test_mc(1, feedback_msgs = c(msg1, msg2))
 ```
-
 
