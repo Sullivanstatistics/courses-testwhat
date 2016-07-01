@@ -305,6 +305,43 @@ test_mc(4, feedback_msgs = c(msg1, msg2, msg3, msg4, msg5))
 ```
 
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1
+## test_function_result
+
+`test_function()` can be problematic in case the arugments of the function you want to test are specified using the ellpsis: `...`.
+
+An example of such a function is `sum()`. Have a look at it's arguments:
+
+```
+> args(sum)
+function (..., na.rm = FALSE) 
+NULL
+```
+
+To test functions liket his, you'll want to resort to `test_function_result()`, a `testwhat` function close to `test_function()`, but instead of checking the arguments the student specified, the function checks the result of the function call with the result of the corresponding function call in the solution. 
+
+Suppose you've written an exercise that asks the student to call the `min()` function on the vectors -5 to 5. Which SCT call do you need?
+
+*** =instructions
+- `test_function(min, ...)`
+- `test_function("min", args = "...")`
+- `test_function_result(min, args = "...")`
+- `test_function_result("min", args = "...")`
+- `test_function_result("min")`
+
+*** =hint
+No hints, I'm sorry!
+
+*** =sct
+```{r}
+msg1 <- "Incorrect; `test_function()` is not appropriate here, and by the way: the arguments are incorrectly specified."
+msg2 <- "Incorrect; `test_function()` is not appropriate here: `args = \"...\"` will not work."
+msg3 <- "Incorrect; You have to place quotes around `min`, and there's no need to specify arguments."
+msg4 <- "Incorrect; There's no need to specify arugments, as the result of the function call is checked, not its arguments."
+msg5 <- "Correct!"
+test_mc(5, feedback_msgs = c(msg1, msg2, msg3, msg4, msg5))
+```
+
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1
 ## test_operator
 
 With `test_operator()`, you can check whether operators were appropriately called.
@@ -329,8 +366,7 @@ No hints, I'm sorry!
 
 *** =sct
 ```{r}
-msg1 <- "Incorrect; You have to specify the operators in quotes, not in backticks."
-msg2 <- msg1
+msg1 <- msg2 <- "Incorrect; You have to specify the operators in quotes, not in backticks."
 msg3 <- "Correct!"
 msg4 <- "Incorrect: there's no need to specify `index = 2`; the multiplication operator is the first multiplication operator."
 test_mc(3, feedback_msgs = c(msg1, msg2, msg3, msg4))
