@@ -304,7 +304,7 @@ msg5 <- "Incorrect: you should specify `eval` instead of `eq_condition`."
 test_mc(4, feedback_msgs = c(msg1, msg2, msg3, msg4, msg5))
 ```
 
---- type:MultipleChoiceExercise lang:r xp:50 skills:1
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:1c77b87518
 ## test_function_result
 
 `test_function()` can be problematic in case the arugments of the function you want to test are specified using the ellpsis: `...`.
