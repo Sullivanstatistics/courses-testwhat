@@ -214,7 +214,7 @@ msg6 <- "Simply using `test_object(\"y\")` will not check the names you give to 
 test_mc(4, feedback_msgs = c(msg1, msg2, msg3, msg4, msg5, msg6))
 ```
 
---- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:28575361b9
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:4ffbb4b343
 ## test_predefined_objects
 
 Often, your pre exercise code will contain code to create some variables in the student's workspace. Ideally, you want to check if these variables are still ok before you want to go on and check other things. With `test_predefined_objects()`, this is a walk in the park.
@@ -341,7 +341,7 @@ msg5 <- "Correct!"
 test_mc(5, feedback_msgs = c(msg1, msg2, msg3, msg4, msg5))
 ```
 
---- type:MultipleChoiceExercise lang:r xp:50 skills:1
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:a9f1e0b177
 ## test_operator
 
 With `test_operator()`, you can check whether operators were appropriately called.
