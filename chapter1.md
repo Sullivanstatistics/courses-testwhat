@@ -26,7 +26,7 @@ No hints, I'm sorry!
 
 *** =sct
 ```{r}
-msg1 <- "Incorrect."
+msg1 <- "Incorrect. Try again"
 msg2 <- "Correct!"
 msg3 <- msg1
 msg4 <- msg1
