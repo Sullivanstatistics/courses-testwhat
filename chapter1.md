@@ -83,7 +83,7 @@ No hints, I'm sorry!
 msg1 <- "There are many ways in which people type this comment, so you'll need a regular expression."
 msg2 <- msg1
 msg3 <- "The regex makes sense, but you have to make sure to set the `fixed` argument appropriately if you use a regex."
-msg4 <- "Correct!"
+msg4 <- "Correct! Proceed!"
 test_mc(4, feedback_msgs = c(msg1, msg2, msg3, msg4))
 ```
 
